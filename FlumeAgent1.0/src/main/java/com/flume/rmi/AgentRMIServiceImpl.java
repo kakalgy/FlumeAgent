@@ -31,7 +31,7 @@ public class AgentRMIServiceImpl extends UnicastRemoteObject implements AgentRMI
 
 	public String getVersion() throws RemoteException {
 		// TODO Auto-generated method stub
-		return null;
+		Application
 	}
 
 	public void parseComand(Command cmd) throws RemoteException {
