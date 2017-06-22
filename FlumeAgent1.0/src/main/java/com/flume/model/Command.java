@@ -5,7 +5,8 @@ import java.util.Arrays;
 public class Command {
 
 	private int scope;
-	private String action;
+	private int action;// 0:start_plugin 1:stop_plugin 2:restart_plugin
+						// 3:restart_flume
 	private String name;
 	private String[] param;
 
@@ -18,7 +19,7 @@ public class Command {
 		// TODO Auto-generated constructor stub
 		String[] strArr = str.split(":");
 		this.scope = Integer.parseInt(strArr[0]);
-		this.action = strArr[1];
+		this.action = Integer.parseInt(strArr[1]);
 		this.name = strArr[2];
 		this.setParam(Arrays.copyOfRange(strArr, 3, strArr.length));
 	}
@@ -31,11 +32,11 @@ public class Command {
 		this.scope = scope;
 	}
 
-	public String getAction() {
+	public int getAction() {
 		return action;
 	}
 
-	public void setAction(String action) {
+	public void setAction(int action) {
 		this.action = action;
 	}
 

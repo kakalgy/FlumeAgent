@@ -208,8 +208,8 @@ public class Application {
 
 	public static void main(String[] args) {
 		agentName = "agent";
-		confFileUrl = Application.class.getClassLoader().getResource("conf/flume.conf");
-		logFileUrl = Application.class.getClassLoader().getResource("conf/log4j.properties");
+		confFileUrl = Application.class.getClassLoader().getResource("flume.conf");
+		logFileUrl = Application.class.getClassLoader().getResource("log4j.properties");
 
 		try {
 
